@@ -54,6 +54,12 @@ if __name__ == '__main__':
     if 'Not open source' == '{{ cookiecutter.open_source_license }}':
         remove_file('LICENSE')
 
+    if "n" == "{{ cookiecutter.use_vscode_devcontainer }}":
+        remove_file(".devcontainer")
+
+    if "n" == "{{ cookiecutter.use_github_workflows }}":
+        remove_file(".github/workflows")
+
     try:
         init_git()
     except Exception as e:

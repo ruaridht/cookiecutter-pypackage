@@ -1,0 +1,6 @@
+{
+    "build": {
+        "dockerfile": "devcontainer.dockerfile",
+        "target": "devcontainer"
+    }
+}

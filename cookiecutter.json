@@ -12,6 +12,8 @@
   "docstrings_style": ["google", "numpy", "pep257"],
   "use_mypy": "n",
   "use_tox": "n",
+  "use_vscode_devcontainer": "y",
+  "use_github_workflows": "n",
   "install_precommit_hooks": "y",
   "_copy_without_render": ["docs/changelog.md", "docs/contributing.md", "docs/index.md", ".github/workflows/*.yml"]
 }
