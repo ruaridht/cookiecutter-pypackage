@@ -40,7 +40,9 @@ dev = [
   "mkdocs-material",
   "mkdocs-material-extensions",
   "pytest-cov",
+  {%- if cookiecutter.use_tox == 'y' %}
   "tox",
+  {%- endif %}
   "mkdocs-include-markdown-plugin",
   "click"
 ]

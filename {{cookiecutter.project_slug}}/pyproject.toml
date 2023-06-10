@@ -76,7 +76,12 @@ test = [
     "pytest-cov"
     ]
 
-dev = ["tox", "pre-commit", "virtualenv", "pip", "twine", "toml", "bump2version"]
+dev = [
+    {%- if cookiecutter.use_tox == 'y' %}
+    "tox",
+    {%- endif %}
+    "pre-commit", "virtualenv", "pip", "twine", "toml", "bump2version"
+    ]
 
 doc = [
     "mkdocs",

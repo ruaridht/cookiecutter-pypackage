@@ -16,7 +16,7 @@ This tool will create Python project with the following features:
 * [Mkdocs](https://www.mkdocs.org): Writing your docs in markdown style
 * Testing with [Pytest](https://pytest.org) (unittest is still supported out of the box)
 * Code coverage report and endorsed by [Codecov](https://codecov.io)
-* [Tox](https://tox.readthedocs.io): Test your code against environment matrix, lint and artifact check
+* [Tox](https://tox.readthedocs.io): Test your code against environment matrix, lint and artifact check (optional)
 * Format with [Black](https://github.com/psf/black) and [Isort](https://github.com/PyCQA/isort)
 * Lint code with [Flake8](https://flake8.pycqa.org) and [Flake8-docstrings](https://pypi.org/project/flake8-docstrings/)
 * Check static type with [Mypy](http://mypy-lang.org/) (optional)
