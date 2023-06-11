@@ -1,14 +1,19 @@
 #!/usr/bin/env python
 import os
+import shutil
 import subprocess
 import sys
 
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
 
 
-def remove_file(filepath):
+def remove_path(filepath):
     try:
-        os.remove(os.path.join(PROJECT_DIRECTORY, filepath))
+        path_to_remove = os.path.join(PROJECT_DIRECTORY, filepath)
+        if os.path.isdir(path_to_remove):
+            shutil.rmtree(path_to_remove)
+        else:
+            os.remove(path_to_remove)
     except FileNotFoundError:
         pass
 
@@ -49,16 +54,16 @@ if __name__ == '__main__':
 
     if 'no' in '{{ cookiecutter.command_line_interface|lower }}':
         cli_file = os.path.join('{{ cookiecutter.pkg_name }}', 'cli.py')
-        remove_file(cli_file)
+        remove_path(cli_file)
 
     if 'Not open source' == '{{ cookiecutter.open_source_license }}':
-        remove_file('LICENSE')
+        remove_path('LICENSE')
 
     if "n" == "{{ cookiecutter.use_vscode_devcontainer }}":
-        remove_file(".devcontainer")
+        remove_path(".devcontainer")
 
     if "n" == "{{ cookiecutter.use_github_workflows }}":
-        remove_file(".github/workflows")
+        remove_path(".github/workflows")
 
     try:
         init_git()
