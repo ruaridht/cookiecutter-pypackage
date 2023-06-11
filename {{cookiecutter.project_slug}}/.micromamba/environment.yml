@@ -1,0 +1,13 @@
+---
+name: {{ cookiecutter.project_slug }}
+
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pytest=7.1.2
+  - ipython=8.4.0
+  - pandas
+  - memory_profiler
+  - ipykernel

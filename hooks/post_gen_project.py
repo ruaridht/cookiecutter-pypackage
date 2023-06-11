@@ -65,6 +65,9 @@ if __name__ == '__main__':
     if "n" == "{{ cookiecutter.use_github_workflows }}":
         remove_path(".github/workflows")
 
+    if "n" == "{{ cookiecutter.use_micromamba_venv }}":
+        remove_path(".micromamba")
+
     try:
         init_git()
     except Exception as e:

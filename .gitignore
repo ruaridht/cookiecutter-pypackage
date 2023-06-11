@@ -1,3 +1,9 @@
+# Cookiecutter template-specific
+micromamba
+.deps
+miniconda.sh
+.miniconda*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
