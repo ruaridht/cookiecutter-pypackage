@@ -1,6 +1,8 @@
 {
     "build": {
         "dockerfile": "devcontainer.dockerfile",
-        "target": "devcontainer"
-    }
+        "target": "devcontainer",
+        "context": ".."
+    },
+    "postStartCommand": "poetry install -E doc -E dev -E test"
 }
