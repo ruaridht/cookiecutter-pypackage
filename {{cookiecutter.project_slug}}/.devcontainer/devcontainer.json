@@ -4,5 +4,19 @@
         "target": "devcontainer",
         "context": ".."
     },
-    "postStartCommand": "poetry install -E doc -E dev -E test"
+    "postStartCommand": "poetry install -E doc -E dev -E test",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "eamodio.gitlens",
+                "fabiospampinato.vscode-diff",
+                "ms-azuretools.vscode-docker",
+                "ms-toolsai.jupyter",
+                "ms-python.vscode-pylance",
+                "ms-python.python",
+                "Gruntfuggly.todo-tree",
+                "redhat.vscode-yaml"
+            ]
+        }
+    }
 }
