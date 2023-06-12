@@ -62,6 +62,7 @@ mkdocs-autorefs = {version = "^0.2.1", optional = true}
 pre-commit = {version = "^2.12.0", optional = true}
 toml = {version = "^0.10.2", optional = true}
 bump2version = {version = "^1.0.1", optional = true}
+ipykernel = {version = "^6.23.1", optional = true}
 
 [tool.poetry.extras]
 test = [
@@ -80,7 +81,8 @@ dev = [
     {%- if cookiecutter.use_tox == 'y' %}
     "tox",
     {%- endif %}
-    "pre-commit", "virtualenv", "pip", "twine", "toml", "bump2version"
+    "pre-commit", "virtualenv", "pip", "twine", "toml", "bump2version",
+    "ipykernel"
     ]
 
 doc = [
