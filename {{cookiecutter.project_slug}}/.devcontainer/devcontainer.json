@@ -4,7 +4,7 @@
         "target": "devcontainer",
         "context": ".."
     },
-    "postStartCommand": "poetry install -E doc -E dev -E test",
+    "postStartCommand": "poetry install -E doc -E dev -E test && pre-commit install",
     "customizations": {
         "vscode": {
             "extensions": [
